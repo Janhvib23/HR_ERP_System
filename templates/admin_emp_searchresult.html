@@ -1,0 +1,92 @@
+<style>
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #04AA6D;
+  color: white;
+}
+</style>
+{% include 'admin_header.html' %}
+
+	<div id="page">
+		<div id="page-bgtop">
+			<div id="page-bgbtm">
+				<div id="page-content">
+					<div id="content">
+						<div class="post">
+							<h2 class="title"><a href="#">Search results</a></h2>
+							<br>
+							<table id="customers">
+
+  <tr>
+    <th>Emp ID</th>
+    <th>Emp Name</th>
+    <th>Designation</th>
+      <th> </th>
+  </tr>
+       {% for n in recordlist %}
+  <tr>
+    <td>{{ n[0] }}</td>
+    <td>{{ n[1] }}</td>
+    <td>{{ n[2] }}</td>
+	<td><a href="/admin_profile?eid={{ n[0] }}" class="btn btn-primary">view</a></td>
+  </tr>
+       {% endfor %}
+</table>
+
+						</div>
+						<div style="clear: both;">&nbsp;</div>
+					</div>
+					<!-- end #content -->
+					<div id="sidebar">
+						<ul>
+							<li>
+
+								<center>
+								<img src="/static/images/admin.jpeg" width="130px">
+								</center>
+									<hr>
+								<center><h3>Administrator</h3></center>
+								<br><br><br>
+							</li>
+							<li>
+
+							</li>
+							<li>
+
+							</li>
+							<li>
+
+							</li>
+						</ul>
+					</div>
+					<!-- end #sidebar -->
+				</div>
+				<div style="clear: both;">&nbsp;</div>
+			</div>
+		</div>
+	</div>
+	<!-- end #page -->
+</div>
+<div id="footer">
+	<p>Copyright (c)2024 lakshitsolution.com. All rights reserved. Design by Laksh IT Solution</p>
+</div>
+<!-- end #footer -->
+</body>
+</html>

@@ -1,0 +1,54 @@
+
+{% include 'header.html' %}
+
+	<div id="page">
+		<div id="page-bgtop">
+				<div id="page-content">
+					<div id="content">
+						<div class="post">
+							<h2 class="title"><a href="#">Admin Login</a></h2>
+							<form action="/admindashboard"  method="post">
+						    <hr>
+							Username: <input type="text" name="txtUsername">
+							<br><br>
+							Password: <input type="password" name="txtPassword">
+							<br>
+							<hr>
+							<input type="submit" value="Login" class="btn btn-success">
+								&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+								<font color="#9b111e">	{{massage}} </font>
+								<hr>
+							</form>
+						</div>
+						<div style="clear: both;">&nbsp;</div>
+					</div>
+					<!-- end #content -->
+					<div id="sidebar">
+						<ul>
+							<li>
+								<h2></h2>
+							<center>
+								<img src="/static/images/login.jpg" width="130px">
+								</center>
+								<center><h3>Administrator</h3></center>
+								<hr>
+								<br><br><br><br><br><br><br><br><br><br><br>
+							</li>
+							<ul>
+								<li></li>
+							</ul>
+					</div>
+					<!-- end #sidebar -->
+				</div>
+				<div style="clear: both;">&nbsp;</div>
+			</div>
+		</div>
+	</div>
+	<!-- end #page -->
+</div>
+<div id="footer">
+	<p>Copyright (c)2024 lakshitsolution.com. All rights reserved. Design by Laksh IT Solution</p>
+</div>
+<!-- end #footer -->
+</body>
+</html>

@@ -1,0 +1,68 @@
+
+{% include 'admin_header.html' %}
+
+	<div id="page">
+		<div id="page-bgtop">
+			<div id="page-bgbtm">
+				<div id="page-content">
+					<div id="content">
+						<div class="post">
+							<h2 class="title"><a href="#">Employee Registration Form</a></h2>
+							<br>
+							<form action="/admin_emp_update" method="post">
+								{% for n in recordlist %}
+								Emp ID: <input type="text" value="{{n[0]}}" name="txtEmpID" class="form-control">
+								Name: <input type="text" value="{{n[1]}}" name="txtName" class="form-control">
+								Email ID:<input type="email" value="{{n[2]}}"name="txtEmailID" class="form-control">
+								Mobile NO:<input type="text" value="{{n[3]}}" name="txtMobileNO" class="form-control">
+								Designation:<input type="text" value="{{n[4]}}" name="txtDesignation" class="form-control">
+								Salary:<input type="text" value="{{n[5]}}" name="txtSalary" class="form-control">
+								<br>
+								<input type="submit" value="Update" class="btn btn-success">
+								&nbsp;&nbsp;&nbsp;&nbsp;
+								<a href="/admin_emp_delete?id= {{ n[0] }}" class="btn btn-danger">Delete</a>
+								{% endfor %}
+							</form>
+
+
+
+						</div>
+						<div style="clear: both;">&nbsp;</div>
+					</div>
+					<!-- end #content -->
+					<div id="sidebar">
+						<ul>
+							<li>
+
+								<center>
+								<img src="/static/images/admin.jpeg" width="130px">
+								</center>
+									<hr>
+								<center><h3>Administrator</h3></center>
+								<br><br><br>
+							</li>
+							<li>
+
+							</li>
+							<li>
+
+							</li>
+							<li>
+
+							</li>
+						</ul>
+					</div>
+					<!-- end #sidebar -->
+				</div>
+				<div style="clear: both;">&nbsp;</div>
+			</div>
+		</div>
+	</div>
+	<!-- end #page -->
+</div>
+<div id="footer">
+	<p>Copyright (c)2024 lakshitsolution.com. All rights reserved. Design by Laksh IT Solution</p>
+</div>
+<!-- end #footer -->
+</body>
+</html>
